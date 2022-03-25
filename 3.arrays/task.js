@@ -10,19 +10,7 @@ function compareArrays(arr1, arr2) {
 
 
 function advancedFilter(arr) {
-    //let resultArr = arr.filter(positiveNumbers).filter(multiples).map(multiplication);
 
-    //    function positiveNumbers(arr) {
-    //         return arr > 0;
-    //     }
-
-    //     function multiples(arr) {
-    //         return arr % 3 === 0;
-    //     }
-
-    //     function multiplication(arr) {
-    //         return arr * 10;
-    //     } 
     let resultArr;
 
 
