@@ -1,10 +1,19 @@
 function Student(name, gender, age) {
-    // Ваш код
+	this.name = name;
+	this.gender = gender;
+	this.age = age;
 
 }
 
 Student.prototype.setSubject = function (subjectName) {
-  //ваш код
+	this.subject = subjectName;
 }
 
-// ваш код для остальных методов
+Student.prototype.addMark = function (mark) {
+	this.marks = mark;
+	if (this.marks === undefined) {
+		mark = []
+	} else {
+
+	}
+}
