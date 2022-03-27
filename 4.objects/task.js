@@ -23,7 +23,7 @@ Student.prototype.addMarks = function(...mark) {
 }
 Student.prototype.getAverage = function() {
 
-    this.marks.reduce((sum, current) => sum + current) / this.marks.length;
+    return this.marks.reduce((sum, current) => sum + current) / this.marks.length;
 }
 
 Student.prototype.exclude = function(reason) {
