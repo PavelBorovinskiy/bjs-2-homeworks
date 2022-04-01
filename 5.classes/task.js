@@ -36,34 +36,46 @@ class Magazine extends PrintEditionItem {
 }
 
 class Book extends PrintEditionItem {
-    constructor(name, releaseDate, pagesCount,author) {
-        super(name, releaseDate, pagesCount,author);
+    constructor(author, name, releaseDate, pagesCount) {
+        super(name, releaseDate, pagesCount);
         this.state = 100;
-        this.type = 'Book';
-        this.author = 'author';
+        this.type = 'book';
+        this.author = author;
     }
 }
 
 class NovelBook extends Book {
-    constructor(name, releaseDate, pagesCount) {
-        super(name, releaseDate, pagesCount);
+    constructor(author, name, releaseDate, pagesCount) {
+        super(author, name, releaseDate, pagesCount);
         this.state = 100;
-        this.type = 'NovelBook';
+        this.type = 'novel';
     }
 }
 
 class FantasticBook extends Book {
-    constructor(name, releaseDate, pagesCount) {
-        super(name, releaseDate, pagesCount);
+    constructor(author, name, releaseDate, pagesCount) {
+        super(author, name, releaseDate, pagesCount);
         this.state = 100;
-        this.type = 'FantasticBook';
+        this.type = 'fantastic';
     }
 }
 
 class DetectiveBook extends Book {
-    constructor(name, releaseDate, pagesCount) {
-        super(name, releaseDate, pagesCount);
+    constructor(author, name, releaseDate, pagesCount) {
+        super(author, name, releaseDate, pagesCount);
         this.state = 100;
-        this.type = 'DetectiveBook';
+        this.type = 'detective';
     }
 }
+
+class Library {
+    constructor(name, books){
+        this.name = name;
+        this.books = [];
+    }
+
+    addBook(book){
+        this.books.push(book)
+    }
+}
+
