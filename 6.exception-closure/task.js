@@ -1,19 +1,19 @@
-const parseCount = (string, base) => {
-    const parsed = Number.parseInt(string, base);
+const parseCount = (string) => {
+    const parsed = Number.parseInt(string);
     if (isNaN(parsed)) {
-        const err = new Error('Невалидное значение');
-        throw err;
+        throw new Error('Невалидное значение');
     }
     return parsed;
 }
 
-const validateCount = (string, base) => {
-    const parsedValid = parseCount(string, base);
+const validateCount = (string) => {
+    const parsedVal = parseCount(string);
     try {
-        if(!isNaN(parsedValid)){
-            return parsedValid;
+        if (!isNaN(parsedVal)) {
+            return parsedVal;
         }
     } catch (error) {
-         return error;
+        error;
     }
+
 }
