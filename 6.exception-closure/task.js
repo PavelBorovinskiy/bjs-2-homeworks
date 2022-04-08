@@ -48,8 +48,11 @@ const getTriangle = (a, b, c) => {
         return new Triangle(a, b, c)
     } catch {
         const err = {
-            getArea: 'Ошибка! Треугольник не существует',
-            getPerimeter: 'Ошибка! Треугольник не существует',
+            getArea(){
+              return 'Ошибка! Треугольник не существует'
+            },
+            getPerimeter() {
+               return 'Ошибка! Треугольник не существует'},
         }
         return err;
     }
