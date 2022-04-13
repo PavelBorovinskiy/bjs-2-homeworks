@@ -21,5 +21,6 @@ class AlarmClock {
 	removeClock(id) {
 		this.alarmCollection.filter(alarm => alarm.id === id);
 		return delete this.alarmCollection;
+
 	}
 }	
